@@ -59,5 +59,5 @@ TEST(Talamanov_Tolya_ComplexNumberTest, Exception_When_Division_By_Zero) {
   ComplexNumber z1(33.5, 12.5);
 
   // Act
-  ASSERT_ANY_THROW(z2 = z1 / z2);
+  ASSERT_ANY_THROW(z1 / z0);
 }
