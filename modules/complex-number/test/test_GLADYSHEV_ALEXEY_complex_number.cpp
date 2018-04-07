@@ -4,7 +4,9 @@
 
 #include "include/complex_number.h"
 
-double epsilon = 0.00001;
+namespace gladyshev {
+  double epsilon = 0.00001;
+}
 
 TEST(Gladyshev_Alexey_ComplexNumberTest, Correct_Order_Of_Operations) {
     // Arrange
@@ -27,8 +29,8 @@ TEST(Gladyshev_Alexey_ComplexNumberTest, Correct_Work_Of_Distributivity) {
     ComplexNumber secondZ = z1 * z2 + z1 * z3;
 
     // Assert
-    EXPECT_NEAR(firstZ.getRe(), secondZ.getRe(), epsilon);
-    EXPECT_NEAR(firstZ.getIm(), secondZ.getIm(), epsilon);
+    EXPECT_NEAR(firstZ.getRe(), secondZ.getRe(), gladyshev::epsilon);
+    EXPECT_NEAR(firstZ.getIm(), secondZ.getIm(), gladyshev::epsilon);
 }
 
 TEST(Gladyshev_Alexey_ComplexNumberTest, Comp_Conjugate_Nums_Is_Real_Num) {
